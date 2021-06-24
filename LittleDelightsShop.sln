@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{2FE132A5-2ECB-4B25-8983-7B7407B21DC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittleDelightShop", "LittleDelightShop\LittleDelightShop.csproj", "{7D0F4EC5-D814-4884-9070-D20158557F7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.LittleDelightsShop", "UnitTests.LittleDelightShop\UnitTests.LittleDelightsShop.csproj", "{FCEB0908-F3AD-4F41-B88B-6DB17992DFA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D0F4EC5-D814-4884-9070-D20158557F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D0F4EC5-D814-4884-9070-D20158557F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D0F4EC5-D814-4884-9070-D20158557F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D0F4EC5-D814-4884-9070-D20158557F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCEB0908-F3AD-4F41-B88B-6DB17992DFA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCEB0908-F3AD-4F41-B88B-6DB17992DFA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCEB0908-F3AD-4F41-B88B-6DB17992DFA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCEB0908-F3AD-4F41-B88B-6DB17992DFA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FCEB0908-F3AD-4F41-B88B-6DB17992DFA4} = {2FE132A5-2ECB-4B25-8983-7B7407B21DC2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {160EF944-819C-415C-91FC-E5ABFA8A258E}
+	EndGlobalSection
+EndGlobal
