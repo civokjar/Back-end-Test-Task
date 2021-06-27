@@ -29,8 +29,8 @@ namespace UnitTests.LittleDelightShop
         {
             return new List<Product>
             {
-                new Milk(freshMilkId, "Happy Cow Milk", DateTime.Now.AddDays(10), 0.85M, 3.7M),
-                new Milk(twoDaysOverBestBeforeDateMilkId, "Happy Cow Milk", DateTime.Now.AddDays(-2), 0.85M, 3.7M),
+                new Milk(freshMilkId, "Happy Cow Milk", DateTime.Now.AddDays(10), 0.85M, 3.7M, 0.5M),
+                new Milk(twoDaysOverBestBeforeDateMilkId, "Happy Cow Milk", DateTime.Now.AddDays(-0.5), 0.85M, 3.7M, 0.5M),
                 new Fish(twoDaysOverBestBeforeDateFishId, "Happy Fish", DateTime.Now.AddDays(-2), 0.9M, 5M),
                 new RedWine(tenYearsOldRedWineId, "Old grandma red wine", null, DateTime.Now.AddYears(-10), 1, 5, 200),
                 new RedWine(hundredAndTwelveDaysOldRedWineId, "Old grandma red wine", null, DateTime.Now.AddDays(-112), 1, 5, 200),

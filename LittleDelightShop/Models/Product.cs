@@ -19,7 +19,7 @@ namespace LittleDelightShop
         public virtual Guid ItemId { get; set; }
         public virtual string Name { get; set; }
         public virtual decimal OriginalPrice { get; set; }
-        public virtual DateTime? BestBefore { get; set; } //Guess that wine could have unlimited
+        public virtual DateTime? BestBefore { get; set; } //Guess that some of the product etc. wine could have unlimited
         public virtual DateTime DateOfProduction { get; set; }
         public virtual int OffsetInDays => (int)Math.Floor((DateTime.Now.Date - (DateTime)BestBefore?.Date).TotalDays);
         public virtual decimal OffsetCofficient { get; set; }
@@ -34,23 +34,21 @@ namespace LittleDelightShop
     }
     public class Milk : Product
     {
-        public Milk(Guid itemId, string name, DateTime? bestBefore, decimal offsetCofficient, decimal originalPrice) : base(itemId, name, bestBefore, offsetCofficient, originalPrice)
+        public Milk(Guid itemId, string name, DateTime? bestBefore, decimal offsetCofficient, decimal originalPrice, decimal firstDayOffsetCofficient) : base(itemId, name, bestBefore, offsetCofficient, originalPrice)
         {
-        }       
-        public override decimal OriginalPrice => 3.70M;
+            FirstDayOffsetCofficient = firstDayOffsetCofficient;          
+        }
+        private decimal FirstDayOffsetCofficient { get; set; }
         public override decimal GetFinalPrice()
         {          
-        
-            if (OffsetInDays <= 1)
-                return base.GetFinalPrice();
 
             var finalPrice = OriginalPrice;
             for (var i = 1; i <= OffsetInDays; i++)
             {
                 if (i == 1)
-                    finalPrice *= 0.5M;
+                    finalPrice *= FirstDayOffsetCofficient;
                 else
-                    finalPrice *= OffsetCofficient;//0.85M;
+                    finalPrice *= OffsetCofficient;
             }
             return finalPrice;
 
@@ -63,13 +61,8 @@ namespace LittleDelightShop
         public Fish(Guid itemId, string name, DateTime bestBefore, decimal offsetCofficient, decimal originalPrice) : base(itemId, name, bestBefore, offsetCofficient, originalPrice)
         {
         }
-
-        public override decimal OriginalPrice => 5M;
         public override decimal GetFinalPrice()
         {
-       
-            if (OffsetInDays <= 1)
-                return OriginalPrice;
 
             var finalPrice = OriginalPrice;
             for (var i = 1; i <= OffsetInDays; i++)
@@ -84,7 +77,7 @@ namespace LittleDelightShop
     public class Wine : Product
     {
         public decimal MaximumPrice { get; set; }
-        public override int OffsetInDays => (int)Math.Floor((DateTime.Now.Date - (DateTime)DateOfProduction.Date).TotalDays);
+        public override int OffsetInDays => (int)Math.Floor((DateTime.Now.Date - DateOfProduction.Date).TotalDays);
         public Wine(Guid itemId, string name, DateTime? bestBefore, DateTime dateOfProduction, decimal offsetCofficient, decimal originalPrice, decimal maximumPrice) : base(itemId, name, bestBefore, offsetCofficient, originalPrice)
         {
             DateOfProduction = dateOfProduction;
@@ -93,9 +86,6 @@ namespace LittleDelightShop
 
         public override decimal GetFinalPrice()
         {
-
-            if (OffsetInDays <= 1)
-                return OriginalPrice;
 
             var finalPrice = OriginalPrice;
             for (var i = 1; i <= OffsetInDays; i++)
@@ -108,7 +98,6 @@ namespace LittleDelightShop
                 }
             }
             return finalPrice;
-
 
         }
     }

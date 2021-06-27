@@ -28,8 +28,6 @@ namespace LittleDelightShop
             foreach (var cartItem in cart.Items) 
             {
                 Total += cartItem.Product.GetFinalPrice() * cartItem.Quantity;
-                //string consoleLine = $"{cartItem.Product.Name} Quantity : x{cartItem.Quantity}  Price:{priceOfTheCurrentItems}";
-                //Console.WriteLine(consoleLine);
             }           
         }
     }
