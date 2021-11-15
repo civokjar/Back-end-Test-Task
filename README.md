@@ -18,6 +18,8 @@ Here is a description of the most important use-cases:
 # Interfaces
 The following interfaces must be used for implementation, the existing methods cannot be
 modified but it is possible to add additional methods or properties if needed.
+
+
 public interface ICart
 {
     /// <summary>
@@ -36,6 +38,8 @@ public interface ICheckout
     /// <param name="cart">the shopping cart</param>
     void CreateReceipt(ICart cart);
 }
+
+
 Pricing
 All of our items have a price (listed below) but there are a few different rules about how the
 pricing is calculated.
