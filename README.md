@@ -75,14 +75,13 @@ To test that the system is working properly we will create a test which will do 
     - 2x a 112 days old red wine
     - 1x a 30 days old sparkling wine
 
-# Create a receipt for the whole shopping cart and make sure nothing is forgotten and
-# the total price is correct
+# Create a receipt for the whole shopping cart and make sure nothing is forgotten and the total price is correct
 Prices for the given test-case:
 Item Price
-1x Milk (fresh) 3.7
-1x Milk (2 days) 1.57
-2x Fish (2 days) 8.1
-1x Red Wine (10 years) 200
-2x Red Wine (112 days) 234
-1x Sparkling Wine (30 days) 37
-Total Sum 484.37
+- 1x Milk (fresh) 3.7
+- 1x Milk (2 days) 1.57
+- 2x Fish (2 days) 8.1
+- 1x Red Wine (10 years) 200
+- 2x Red Wine (112 days) 234
+- 1x Sparkling Wine (30 days) 37
+# Total Sum 484.37
