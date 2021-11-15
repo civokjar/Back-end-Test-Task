@@ -22,21 +22,25 @@ modified but it is possible to add additional methods or properties if needed.
 
 public interface ICart
 {
+
     /// <summary>
     /// Adds a new item into the shopping cart
     /// </summary>
     /// <param name="itemId">the item identifier</param>
     /// <param name="quantity">how many of this item should be added</param>
     void AddItem(Guid itemId, int quantity);
+
 }
 
 public interface ICheckout
 {
+
     /// <summary>
     /// Creates a receipt for all items of the shopping cart
     /// </summary>
     /// <param name="cart">the shopping cart</param>
     void CreateReceipt(ICart cart);
+    
 }
 
 
