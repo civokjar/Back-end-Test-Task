@@ -40,7 +40,7 @@ public interface ICheckout
     /// </summary>
     /// <param name="cart">the shopping cart</param>
     void CreateReceipt(ICart cart);
-    
+
 }
 
 
@@ -49,17 +49,17 @@ All of our items have a price (listed below) but there are a few different rules
 pricing is calculated.
 We sell the following items in our store:
 - Milk
-- Price starts with 3.70
-- 1 day after best-before date the price will drop immediately to 50%
-- Every additional day the price will be decreased by another 15%
+    Price starts with 3.70
+    1 day after best-before date the price will drop immediately to 50%
+    Every additional day the price will be decreased by another 15%
 - Fish
-- Price starts with 5
-- Price decreases every day by 10%
+    Price starts with 5
+    Price decreases every day by 10%
 - Wine
-- Price of red wine starts from 5
-- Price of sparkling wine starts from 7
-- Price increases every day by 1
-- Maximum price is 200
+    Price of red wine starts from 5
+    Price of sparkling wine starts from 7
+    Price increases every day by 1
+    Maximum price is 200
 
 # Tests
 We expect that the solution is thoroughly covered with unit tests to make sure the
@@ -68,14 +68,15 @@ requirements above are fulfilled and the system is working.
 Testing Use-Case
 To test that the system is working properly we will create a test which will do the following:
 - Put the following items in the shopping cart:
-- 1x Milk that is fresh
-- 1x Milk that is 2 days over best-before date
-- 2x Fish that are 2 days over best-before date
-- 1x a 10 year old red wine
-- 2x a 112 days old red wine
-- 1x a 30 days old sparkling wine
-- Create a receipt for the whole shopping cart and make sure nothing is forgotten and
-the total price is correct
+    - 1x Milk that is fresh
+    - 1x Milk that is 2 days over best-before date
+    - 2x Fish that are 2 days over best-before date
+    - 1x a 10 year old red wine
+    - 2x a 112 days old red wine
+    - 1x a 30 days old sparkling wine
+
+# Create a receipt for the whole shopping cart and make sure nothing is forgotten and
+# the total price is correct
 Prices for the given test-case:
 Item Price
 1x Milk (fresh) 3.7
