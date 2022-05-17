@@ -49,17 +49,17 @@ All of our items have a price (listed below) but there are a few different rules
 pricing is calculated.
 We sell the following items in our store:
 - Milk
-    Price starts with 3.70
-    1 day after best-before date the price will drop immediately to 50%
-    Every additional day the price will be decreased by another 15%
+    - Price starts with 3.70
+    - 1 day after best-before date the price will drop immediately to 50%
+    - Every additional day the price will be decreased by another 15%
 - Fish
-    Price starts with 5
-    Price decreases every day by 10%
+    - Price starts with 5
+    - Price decreases every day by 10%
 - Wine
-    Price of red wine starts from 5
-    Price of sparkling wine starts from 7
-    Price increases every day by 1
-    Maximum price is 200
+    - Price of red wine starts from 5
+    - Price of sparkling wine starts from 7
+    - Price increases every day by 1
+    - Maximum price is 200
 
 # Tests
 We expect that the solution is thoroughly covered with unit tests to make sure the
